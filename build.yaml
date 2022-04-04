@@ -1,0 +1,14 @@
+---
+apiVersion: shipwright.io/v1alpha1
+kind: Build
+metadata:
+  name: bd
+spec:
+  source:
+    url: https://github.com/alicerum/gotest
+  strategy:
+    name: buildah
+    kind: ClusterBuildStrategy
+  dockerfile: Dockerfile
+  output:
+    image: wyvie.org:5000/gotest/gotest:latest

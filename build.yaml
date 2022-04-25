@@ -12,3 +12,8 @@ spec:
   dockerfile: Dockerfile
   output:
     image: wyvie.org:5000/gotest/gotest:latest
+  volumes:
+    - name: some-config
+      volumeSource:
+        configMap:
+          name: test-config

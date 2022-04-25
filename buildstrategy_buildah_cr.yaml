@@ -215,8 +215,7 @@ spec:
   volumes:
     - name: some-config
       description: "Very important config"
-      optional: false
+      overridable: true
       volumeSource:
-        configMap:
-          name: test-config
+        emptyDir: {}
 
